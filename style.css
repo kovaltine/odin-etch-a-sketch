@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  min-width: 0;
+  min-height: 0;
+  height: 50vh;
+  width: 50vh;
+  max-width: 60vw;
+  max-height: 60vh;
+  margin: auto;
+}
+
+.unit {
+  border: 0.5px solid rgb(77, 76, 76);
+  background-color: aqua;
+  /* making the generated divs square*/
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+
+.unit:after {
+  display: block;
+  padding-bottom: 100%;
+}
+
+.active {
+  border: 0.5px solid black;
+  background-color: blue;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+
+.active:after {
+  display: block;
+  padding-bottom: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+}
+
+button {
+  margin: 3rem 1rem 3rem 1rem;
+  width: 10rem;
+}
